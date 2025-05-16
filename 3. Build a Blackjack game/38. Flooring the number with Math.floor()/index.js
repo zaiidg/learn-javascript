@@ -9,6 +9,6 @@ console.log(flooredNumber)
 
 What does Math.floor() do to positive numbers?
 
-Your answer: 
+Your answer: It will always round down to the nearest whole number. In other words, remove numbers after the decimal.
 
 */

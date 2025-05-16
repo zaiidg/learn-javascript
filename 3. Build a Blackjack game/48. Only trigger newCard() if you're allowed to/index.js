@@ -2,6 +2,7 @@ let cards = []
 let sum = 0
 let hasBlackJack = false
 let isAlive = false
+let gameStarted = false
 let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
@@ -19,12 +20,15 @@ function getRandomCard() {
 }
 
 function startGame() {
+    if (gameStarted === false){
     isAlive = true
     let firstCard = getRandomCard()
     let secondCard = getRandomCard()
     cards = [firstCard, secondCard]
     sum = firstCard + secondCard
     renderGame()
+    gameStarted = true
+    }
 }
 
 function renderGame() {
@@ -49,8 +53,10 @@ function renderGame() {
 
 function newCard() {
     // Only allow the player to get a new card if she IS alive and does NOT have Blackjack
-    let card = getRandomCard()
-    sum += card
-    cards.push(card)
-    renderGame()
+    if (isAlive === true && sum < 21){
+        let card = getRandomCard()
+        sum += card
+        cards.push(card)
+        renderGame()
+    }
 }

@@ -11,7 +11,9 @@ let cardsEl = document.getElementById("cards-el")
 
 // Create a function, getRandomCard(), that always returns the number 5
 
-
+function getRandomCard(){
+    return 5
+}
 function startGame() {
     renderGame()
 }

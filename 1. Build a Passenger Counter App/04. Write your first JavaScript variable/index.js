@@ -4,6 +4,9 @@ let count = 0
 
 console.log(count)
 
+let myAge = 20
+
+console.log(myAge)
 
 // 1. Create a variable, myAge, and set its value to your age
 
