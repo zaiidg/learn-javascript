@@ -6,11 +6,12 @@ const ulEl = document.getElementById("ul-el")
 inputBtn.addEventListener("click", function() {
     myLeads.push(inputEl.value)
     console.log(myLeads)
+    ulEl.innerHTML += "<li>" + inputBtn.value + "</li>"
 })
 
 // Replace .textContent with .innerHTML and use <li> tags
 for (let i = 0; i < myLeads.length; i++) {
-    ulEl.textContent += myLeads[i] + " "
+    ulEl.innerHTML += "<li>" + myLeads[i] + "</li>"
 }
 
 
